@@ -1,10 +1,18 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import slide_image from "../public/assets/Images/unsplash_01.png";
+import slide_image2 from "../public/assets/Images/unsplash_02.png";
+import slide_image3 from "../public/assets/Images/unsplash_03.png";
 
 import "swiper/css";
 import "swiper/css/effect-cards";
 
-import { EffectCards } from "swiper";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import { EffectCoverflow, Pagination, Navigation } from "swiper";
+import Image from "next/image";
 
 const Count = [
   { id: 1, number: "98K+", name: "Artwork" },
@@ -39,11 +47,58 @@ const Banner = () => {
           </div>
         </div>
         <div className="w-1/2">
-          {" "}
-          <Swiper effect={"cards"} grabCursor={true} modules={[EffectCards]} className=" h-80">
-            <SwiperSlide className="w-20 h-80 bg-brand_color rounded-lg">Slide 1</SwiperSlide>
-            <SwiperSlide className="w-40 h-80 bg-rose-600">Slide 2</SwiperSlide>
-            <SwiperSlide className="w-40 h-80 bg-green-600">Slide 4</SwiperSlide>
+          <Swiper
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            // loop={true}
+            slidesPerView={"auto"}
+            coverflowEffect={{
+              rotate: 0,
+              stretch: 220,
+              depth: 100,
+              modifier: 2.5,
+              slideShadows: false,
+            }}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+              clickable: true,
+            }}
+            modules={[EffectCoverflow, Pagination, Navigation]}
+            className="swiper_container"
+          >
+            <SwiperSlide>
+              <Image width={350} height={400} src={slide_image} alt="slide_image" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image width={350} height={400} src={slide_image2} alt="slide_image" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image width={350} height={400} src={slide_image3} alt="slide_image" />
+            </SwiperSlide>
+            {/* <SwiperSlide>
+              <Image src={slide_image} alt="slide_image" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image src={slide_image} alt="slide_image" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image src={slide_image} alt="slide_image" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image src={slide_image} alt="slide_image" />
+            </SwiperSlide> */}
+
+            <div className="slider-controler">
+              <div className="swiper-button-prev slider-arrow">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+              </div>
+              <div className="swiper-button-next slider-arrow">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </div>
+              <div className="swiper-pagination"></div>
+            </div>
           </Swiper>
         </div>
       </div>
