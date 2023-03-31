@@ -12,7 +12,8 @@
     "glider-js": "^1.7.7",
     "next": "12.3.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "swiper": "^9.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",

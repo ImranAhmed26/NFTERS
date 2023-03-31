@@ -12,6 +12,7 @@ module.exports = {
       "2xl": "1536px",
     },
     colors: ({ colors }) => ({
+      brand_color: "#3D00B7",
       color_dark: "#00071B",
       color_gray: "#C4C4C4",
       color_blue: "#002482",

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Banner from "../components/banner";
 import Navbar from "../components/navbar";
 
 export default function Home() {
@@ -13,6 +14,11 @@ export default function Home() {
 
       <main>
         <Navbar />
+        <div className="flex justify-center">
+          <div className="max-w-7xl ">
+            <Banner />
+          </div>
+        </div>
       </main>
 
       <footer>

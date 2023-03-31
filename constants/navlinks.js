@@ -1,10 +1,8 @@
 const Navlinks = {
   navlinks: [
-    { name: "Men", link: "/" },
-    { name: "Women", link: "/" },
-    { name: "Kids", link: "/" },
-    { name: "Shop", link: "/" },
-    { name: "Contact Us", link: "/" },
+    { name: "Marketplace", link: "/" },
+    { name: "Resources", link: "/" },
+    { name: "About", link: "/" },
   ],
 };
 

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-import Logo from "../public/assets/logo.png";
+import Logo from "../public/assets/NFters.png";
 import NavLinks from "../constants/navlinks.js";
 import SearchIcon from "../public/assets/search.svg";
 import FavoriteIcon from "../public/assets/favourite.svg";
@@ -24,14 +24,14 @@ const Navbar = () => {
   };
 
   return (
-    <div>
-      <div className="w-full h-20 px-12 py-3.5 bg-white text-lg drop-shadow-md flex items-center sticky z-30 top-0">
+    <div className="bg-white border-b flex justify-center">
+      <div className=" h-28 py-3.5 bg-white text-lg flex items-center sticky z-30 top-0">
         <div className="flex items-center w-1/2">
           <div>
-            <Image src={Logo} width={57} height={48} alt={"logo"} />
+            <Image src={Logo} width={107} height={22} alt={"logo"} />
           </div>
           <div>
-            <div className=" flex gap-3 px-4 lg:gap-5 xl:gap-7 2xl:gap-9 lg:px-7 xl:px-12 2xl:px-28 text-base lg:text-lg xl:text-xl py-2 ">
+            <div className="hidden md:flex gap-3 px-4 lg:gap-5 lg:px-7 xl:px-12 2xl:px-20 text-base text-black lg:text-lg xl:text-lg py-2 ">
               {NavLinks.navlinks.map((items, i) => {
                 return (
                   <div key={isNaN}>
@@ -44,19 +44,19 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center w-1/2">
+        <div className="flex items-center w-1/2 gap-4">
           <div
-            className="bg-gray-100 max-w-lg w-full h-12 rounded-md px-8 text-xl items-center flex justify-between shadow-sm"
+            className="border max-w-lg w-full h-[50px] rounded-full px-8 text-xl items-center flex justify-between shadow-sm"
             onClick={(e) => {
               handleSearch;
             }}
           >
             <input
               type="text"
-              placeholder="Search here"
+              placeholder="Search"
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
-              className="text-color_gray bg-gray-100 outline-none w-4/5"
+              className="text-color_gray bg-white outline-none w-4/5"
             />
             <Image
               src={SearchIcon}
@@ -66,16 +66,12 @@ const Navbar = () => {
               className="cursor-pointer"
             />
           </div>
-          <div className="flex items-center justify-end w-full pt-2 pl-2">
-            <div className="w-16">
-              <Image src={FavoriteIcon} width={28} height={24} alt={"favorite"} />
+          <div className="flex justify-center w-full pl-2 text-white text-center text-sm gap-5">
+            <div className="flex justify-center items-center w-28 h-[50px] bg-brand_color rounded-full hover:bg-[#6C00FF] transition-all duration-150 cursor-pointer">
+              Upload
             </div>
-            <div className="w-16">
-              <Image src={CartIcon} width={28} height={20} alt={"cart"} />
-            </div>
-            <div className="flex gap-2 items-center">
-              <Image src={profileImage} width={40} height={40} alt={"DP"} />
-              <h1>{profileName}</h1>
+            <div className="flex justify-center items-center w-36 h-[50px] border-2 text-brand_color font-semibold border-brand_color bg-white rounded-full hover:border-[#6C00FF] hover:text-[#6C00FF] hover:scale-105 transition-all duration-150 cursor-pointer">
+              Connect Wallet
             </div>
           </div>
         </div>
