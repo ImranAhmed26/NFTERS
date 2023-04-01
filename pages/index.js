@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import Banner from "../components/banner";
-import Navbar from "../components/navbar";
+import Banner from "../components/sections/banner";
+import Navbar from "../components/sections/navbar";
 
 export default function Home() {
   return (

@@ -2,22 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-import Logo from "../public/assets/NFters.png";
-import NavLinks from "../constants/navlinks.js";
-import SearchIcon from "../public/assets/search.svg";
-import FavoriteIcon from "../public/assets/favourite.svg";
-import CartIcon from "../public/assets/cart.svg";
-import ProfileIcon from "../public/assets/profile-image.png";
+import Logo from "../../public/assets/NFters.png";
+import NavLinks from "../../constants/navlinks.js";
+import SearchIcon from "../../public/assets/search.svg";
 
 const Navbar = () => {
   const [searchText, setSearchText] = useState("");
   const [profileImage, setProfileImage] = useState("");
   const [profileName, setProfileName] = useState("");
 
-  useEffect(() => {
-    setProfileImage(ProfileIcon);
-    setProfileName("Anne Doe");
-  });
 
   const handleSearch = () => {
     "logic for handling search";
