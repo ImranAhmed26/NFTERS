@@ -19,7 +19,7 @@ const Sections = () => {
         </div>
       </div>
       <div className="flex justify-center w-full  mt-20">
-        <div className="max-w-7xl">
+        <div className="max-w-7xl pb-20">
           <TopCollections />
         </div>
       </div>

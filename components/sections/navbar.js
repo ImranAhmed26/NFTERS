@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import Logo from "../../public/assets/NFters.png";
 import NavLinks from "../../constants/navlinks.js";
 import SearchIcon from "../../public/assets/search.svg";
+import { FiSearch } from "react-icons/fi";
 
 const Navbar = () => {
   const [searchText, setSearchText] = useState("");
@@ -36,7 +37,7 @@ const Navbar = () => {
         </div>
         <div className="flex items-center w-1/2 gap-4">
           <div
-            className="border max-w-lg w-full h-[50px] rounded-full px-8 text-xl items-center flex justify-between shadow-sm"
+            className="border max-w-lg w-full h-[50px] rounded-full px-4 text-xl items-center flex justify-between shadow-sm"
             onClick={(e) => {
               handleSearch;
             }}
@@ -46,15 +47,9 @@ const Navbar = () => {
               placeholder="Search"
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
-              className="text-color_gray bg-white outline-none w-4/5"
+              className="text-color_gray bg-white outline-none w-4/5 px-6"
             />
-            <Image
-              src={SearchIcon}
-              width={25}
-              height={25}
-              alt={"SearchIcon"}
-              className="cursor-pointer"
-            />
+            <FiSearch size={"1.4em"} className="text-gray-400" />
           </div>
           <div className="flex justify-center w-full pl-2 text-white text-center text-sm gap-5">
             <div className="flex justify-center items-center w-28 h-[50px] bg-brand_color rounded-full hover:bg-[#6C00FF] transition-all duration-150 cursor-pointer">
