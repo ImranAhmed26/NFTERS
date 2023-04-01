@@ -9,8 +9,8 @@ import { Collections, TopCollectionsOver } from "../../constants/constants";
 
 const TopCollections = () => {
   return (
-    <div className="flex justify-between gap-6 divide-x">
-      <div className="flex justify-between gap-12 ">
+    <div className="flex flex-col lg:flex-row justify-between gap-6 lg:divide-x">
+      <div className="flex flex-col sm:flex-row justify-between gap-12 ">
         <div>
           <Image width={400} height={424} src={Collection1} alt="collection" />
           <div className="flex justify-between pt-6">

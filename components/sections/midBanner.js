@@ -6,8 +6,8 @@ import ChartSquare from "../../public/assets/icons/chart_square.png";
 
 const MidBanner = () => {
   return (
-    <div className="flex gap-16 lg:py-28 ">
-      <div className="text-3xl font-extrabold font-sans uppercase max-w-lg lg:px-16">
+    <div className="flex flex-col lg:flex-row items-center lg:items-baseline  gap-16 lg:py-28 ">
+      <div className="text-3xl font-extrabold font-sans uppercase max-w-lg lg:px-16 text-center lg:text-left">
         The amazing NFT art of the world here
       </div>
       <div>

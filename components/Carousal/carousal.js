@@ -11,7 +11,7 @@ import "swiper/css/effect-coverflow";
 
 const Carousal = () => {
   return (
-    <div className="flex items-center w-[680px] relative">
+    <div className="flex items-center w-[400px] lg:w-[680px] relative">
       <div className="absolute z-10 w-32 -left-16">
         <Image src={Seal} height={300} width={300} alt="seal" />
       </div>
