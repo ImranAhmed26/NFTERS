@@ -4,15 +4,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { CarousalCards } from "../../constants/carousalCards";
 import { EffectCoverflow } from "swiper";
 import { FaEthereum } from "react-icons/fa";
-
+import Seal from "../../public/assets/Images/Group_83.png";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/effect-coverflow";
 
 const Carousal = () => {
   return (
-    <div className="flex justify-center w-[680px]">
-      {/* <div>A</div> */}
+    <div className="flex items-center w-[680px] relative">
+      <div className="absolute z-10 w-32 -left-16">
+        <Image src={Seal} height={300} width={300} alt="seal" />
+      </div>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -37,7 +39,7 @@ const Carousal = () => {
         {CarousalCards.map((item) => {
           return (
             <SwiperSlide key={item.id} className="relative">
-              <div className="absolute z-30 top-0  text-white p-6">
+              <div className="absolute z-10 top-0  text-white p-6">
                 <div className="font-semibold text-3xl">{item.title}</div>
                 <div className="flex pt-3">
                   <Image width={35} height={35} src={item.profilePicture} alt={item.name} />
