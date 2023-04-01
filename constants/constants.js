@@ -11,7 +11,7 @@ import Pic1 from "../public/assets/collections/pic01.png";
 import Pic2 from "../public/assets/collections/pic02.png";
 import Pic3 from "../public/assets/collections/pic03.png";
 import Pic4 from "../public/assets/collections/pic04.png";
-import Pic5 from "../public/assets/collections/pic05.png";
+import Pic5 from "../public/assets/collections/pic05.png"; 
 
 export const CarousalCards = [
   {
