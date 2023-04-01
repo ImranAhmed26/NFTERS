@@ -4,8 +4,8 @@ import Slide_image3 from "../public/assets/Images/unsplash_03.png";
 import ProfilePicture from "../public/assets/Images/profile_picture.png";
 
 import Collection2 from "../public/assets/collections/group02.png";
-import Collection3 from "../public/assets/collections/group03.png";
-import Collection4 from "../public/assets/collections/group04.png";
+import Collection3 from "../public/assets/collections/group05.png";
+import Collection4 from "../public/assets/collections/group06.png";
 
 import Pic1 from "../public/assets/collections/pic01.png";
 import Pic2 from "../public/assets/collections/pic02.png";
