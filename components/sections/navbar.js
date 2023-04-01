@@ -8,9 +8,6 @@ import SearchIcon from "../../public/assets/search.svg";
 
 const Navbar = () => {
   const [searchText, setSearchText] = useState("");
-  const [profileImage, setProfileImage] = useState("");
-  const [profileName, setProfileName] = useState("");
-
 
   const handleSearch = () => {
     "logic for handling search";

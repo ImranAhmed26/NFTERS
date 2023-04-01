@@ -10,7 +10,7 @@ const Count = [
   { id: 1, number: "15K+", name: "Artist" },
 ];
 
-const Banner = () => {
+const TopBanner = () => {
   return (
     <div>
       <div className="font-sans w-[1229px] h-[440px] flex gap-6 justify-center mt-16">
@@ -30,7 +30,7 @@ const Banner = () => {
               return (
                 <div key={idx} className="">
                   <div className="font-extrabold text-5xl mt-4">{item.number}</div>
-                  <div>{item.name}</div>
+                  <div className="font-medium text-lg">{item.name}</div>
                 </div>
               );
             })}
@@ -42,4 +42,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default TopBanner;

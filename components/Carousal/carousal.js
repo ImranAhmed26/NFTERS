@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { CarousalCards } from "../../constants/carousalCards";
+import { CarousalCards } from "../../constants/constants";
 import { EffectCoverflow } from "swiper";
 import { FaEthereum } from "react-icons/fa";
 import Seal from "../../public/assets/Images/Group_83.png";
